@@ -6,7 +6,8 @@ const app = express();
 const PORT = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static(__dirname)); // Serve static files from the root directory
+
 
 // Endpoint for user registration
 app.post('/signup', (req, res) => {
