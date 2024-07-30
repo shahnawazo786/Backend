@@ -4,6 +4,8 @@ const fs = require('fs');
 const csv = require('csv-parser');
 const app = express();
 const PORT = 3000;
+const cors = require('cors');
+app.use(cors({ origin: 'https://demoagri123.netlify.app' }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname)); // Serve static files from the root directory
